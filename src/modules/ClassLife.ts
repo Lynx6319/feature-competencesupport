@@ -3,7 +3,7 @@ import {CLASSLIFE_COMMENT_POST, CLASSLIFE_GET} from "../rest/endpoints";
 import {decodeBase64JSON} from "../utils/json";
 import {ClassLifeCommentId} from "../types/ClassLifeCommentId";
 import {encodeBase64} from "../utils/base64";
-import {DownloaderModules} from "./Downloader";
+import {ClassLife} from "../types/ClassLife";
 
 export class ClassLifeModules extends Modules {
     public async getClassLife(): Promise<ClassLife> {

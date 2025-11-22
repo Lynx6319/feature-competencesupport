@@ -1,6 +1,6 @@
 import {Modules} from "./Modules";
 import {SCHOOLLIFE_GET} from "../rest/endpoints";
-import {DownloaderModules} from "./Downloader";
+import {SchoolLife} from "../types/SchoolLife";
 
 export class SchoolLifeModules extends Modules {
     public async getSchoolLife(): Promise<SchoolLife> {
