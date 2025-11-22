@@ -55,3 +55,10 @@ export const TIMETABLE_ICS_GET = (account_kind: AccountKind, account_id: number)
 /* *************************************************************** */
 
 export const SCHOOLLIFE_GET = (account_kind: AccountKind, account_id: number) => `/v3/${decodeAccountKind(account_kind)}/${account_id}/viescolaire.awp?verbe=get`
+
+/* *************************************************************** */
+/* Modules - Class Life                                            */
+/* *************************************************************** */
+
+export const CLASSLIFE_GET = (class_id: number) => `/v3/Classes/${class_id}/viedelaclasse.awp?verbe=get`
+export const CLASSLIFE_COMMENT_POST =  (account_kind: AccountKind, account_id: number) => `/v3/${decodeAccountKind(account_kind)}/${account_id}/viedelaclasse/commentaires.awp?verbe=post`

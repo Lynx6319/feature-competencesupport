@@ -4,6 +4,7 @@ import {AuthModules} from "../modules/Auth";
 import {TimelineModules} from "../modules/Timeline";
 import {TimetableModules} from "../modules/Timetable";
 import {SchoolLife} from "../modules/SchoolLife";
+import {ClassLife} from "../modules/ClassLife";
 
 export class Client {
     private restManager: RESTManager;
@@ -13,6 +14,7 @@ export class Client {
     public timeline: TimelineModules;
     public timetable: TimetableModules;
     public schoollife: SchoolLife;
+    public classlife: ClassLife;
 
     constructor(credential?: Credential) {
         if (credential) this.credentials = credential;
@@ -22,5 +24,6 @@ export class Client {
         this.timeline = new TimelineModules(this.restManager, this.credentials);
         this.timetable = new TimetableModules(this.restManager, this.credentials, "EDT");
         this.schoollife = new SchoolLife(this.restManager, this.credentials, "VIE_SCOLAIRE");
+        this.classlife = new ClassLife(this.restManager, this.credentials, "VIE_DE_LA_CLASSE");
     }
 }

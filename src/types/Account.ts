@@ -1,6 +1,7 @@
 import AccountKind from "./AccountKind";
 import {AccountIndividualSettings} from "./AccountIndividualSettings";
 import {Module} from "./Module";
+import {AccountProfile} from "./AccountProfile";
 
 export interface Account {
     idLogin: number;
@@ -21,6 +22,7 @@ export interface Account {
     logoEtablissement: string;
     couleurAgendaEtablissement: string;
     dicoEnLigneLeRobert: boolean;
+    profile: AccountProfile;
     socketToken: string;
     modules: Module[];
     parametresIndividuels: AccountIndividualSettings;
