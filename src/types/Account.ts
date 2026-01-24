@@ -24,6 +24,7 @@ export interface Account {
     dicoEnLigneLeRobert: boolean;
     profile: AccountProfile;
     socketToken: string;
+    accessToken: string;
     modules: Module[];
     parametresIndividuels: AccountIndividualSettings;
 }
